@@ -19,11 +19,23 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
  *  route properties:   path= the route path = "/about" ,
  *   element- which react element we want to render if the path in the url matches the path that we defined in this route component
  *  usally the path of the home page will be "/"
+ * a route can have children - but the child must be a route component
  *
  * Link- like an ancore tag- navigate to a diffrent page without refreshing the page so if i have any state in tghe component,
  *    the refresh will wipe out the values n the state (unless we save it somewhere)
  * when we style it - a link is actually an a html element - so to accese it either use className property or the a element  (nav > a ...)
  *
+ * Nesting routes - when you want to keep displaying some UI on the page (with other components)
+ *  but also want to display more (for exmaple- keeping the navigation bar but also adiing new things )
+ *  When we want to avoid repetition in our route definitions.
+ *
+ * React layout components are reusable parts that specify your application's skeleton or structure.
+ *    Consistently placed headers, sidebars, footers, and navigation bars are examples of layout components.
+ *    By centralizing these common structures, these components help you reduce duplication and
+ *    improve the maintainability of your program.
+ * The Outlet component is a placeholder in your layout where the matched child route components will be rendered
+ * if your application has a shared layout across multiple routes, Outlet ensures that the content of
+ *    each route is dynamically injected into the layout.
  */
 
 function About() {
